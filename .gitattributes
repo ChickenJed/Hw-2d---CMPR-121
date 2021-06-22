@@ -1,2 +1,40 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+// Attached: HW_2a, 2b, 2c, 2d
+// ======================================================
+// Program: HW_2d
+// ======================================================
+// Programmer: Christian Verry
+// Class: CS CMPR 121
+// ======================================================
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+
+	int idNumbers[5] = { 12345, 54321, 11223, 33211, 44411 };
+	int idSearch = 0;
+	int index = 0;
+	bool found = false;
+
+	cout << "Enter an ID number to be searched: ";
+	cin >> idSearch;
+
+	while (index < 5 && !found)
+	{
+		if (idNumbers[index] == idSearch)
+			found = true;
+		else
+			index++;
+	}
+
+	if (found)
+		cout << '\n' << idSearch << " is found at index " << index + 1 << '\n';
+	else
+		cout << "\nThe ID number is not on the list.\n";
+
+
+	return 0;
+}
